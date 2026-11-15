@@ -1,0 +1,6 @@
+# Deny ALL direct HTTP access to prescription files.
+# They are served only through PrescriptionController::download()
+# which enforces ownership before calling readfile().
+
+Order Deny,Allow
+Deny from all
